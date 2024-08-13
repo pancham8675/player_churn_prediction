@@ -7,15 +7,16 @@ This project focuses on predicting player churn in online games using machine le
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Project Structure](#project-structure)
-4. [Features](#features)
-5. [Files in the Repository](#files-in-the-repository)
-6. [Data](#data)
-7. [Models](#models)
-8. [Results](#results)
-9. [Visualizations](#visualizations)
-10. [Contributing](#contributing)
-11. [Acknowledgments](#acknowledgments)
-12. [Contact Information](#contact-information)
+4. [Project Workflow](#project-workflow)
+5. [Features](#features)
+6. [Files in the Repository](#files-in-the-repository)
+7. [Data](#data)
+8. [Models](#models)
+9. [Results](#results)
+10. [Visualizations](#visualizations)
+11. [Contributing](#contributing)
+12. [Acknowledgments](#acknowledgments)
+13. [Contact Information](#contact-information)
 
 ## Installation
 1. Clone the repository to your local machine.
@@ -35,6 +36,70 @@ This project focuses on predicting player churn in online games using machine le
 - **`PlayerChurnForecasting.ipynb`**: Jupyter Notebook containing the entire workflow from data processing to model building.
 - **`player_churn_powerbi_dashboard.pbix`**: Power BI file with visualizations of player churn metrics.
 - **`Research Paper.pdf`**: Published research paper detailing the methodologies and findings of the project.
+
+## Project Workflow
+
+The workflow of the Player Churn Prediction project is as follows:
+
+1. **Data Collection:**
+   - The initial raw data was collected from various gaming platforms, capturing key player metrics and behaviors.
+
+2. **Data Preprocessing:**
+   - **Loading Data:**
+     ```python
+     import pandas as pd
+     raw_data = pd.read_csv('dataset.csv')
+     ```
+   - **Data Cleaning:**
+     - Handle missing values, remove duplicates, and normalize data types.
+     ```python
+     cleaned_data = raw_data.dropna().drop_duplicates()
+     ```
+   - **Feature Engineering:**
+     - Create new features that enhance the predictive power of the dataset.
+     ```python
+     cleaned_data['session_duration_log'] = np.log(cleaned_data['session_duration'] + 1)
+     ```
+   - **Splitting Data:**
+     - Split the data into training and testing datasets.
+     ```python
+     from sklearn.model_selection import train_test_split
+     X = cleaned_data.drop('churn', axis=1)
+     y = cleaned_data['churn']
+     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+     ```
+
+3. **Model Building:**
+   - **Model Selection:**
+     - Choose appropriate machine learning models for prediction.
+     - Here, Random Forest and Logistic Regression were selected.
+   - **Model Training:**
+     ```python
+     from sklearn.ensemble import RandomForestClassifier
+     rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
+     rf_model.fit(X_train, y_train)
+     ```
+   - **Model Evaluation:**
+     - Evaluate the model performance using accuracy, precision, recall, and F1-score.
+     ```python
+     from sklearn.metrics import accuracy_score, classification_report
+     y_pred = rf_model.predict(X_test)
+     print("Accuracy:", accuracy_score(y_test, y_pred))
+     print("Classification Report:\n", classification_report(y_test, y_pred))
+     ```
+
+4. **Data Visualization:**
+   - **Power BI Dashboard:**
+     - Use Power BI to visualize key metrics and player churn insights.
+     - Load the `final_dataset.csv` into Power BI and create visuals.
+   - **Dashboard Integration:**
+     - The dashboard integrates insights from the predictive model and highlights areas for improving player retention.
+
+5. **Research Paper:**
+   - **Documentation:**
+     - The findings, methodology, and results were documented in a research paper, which was published and added to the repository.
+   - **Analysis:**
+     - The paper provides detailed analysis and insights derived from the project, offering valuable contributions to the field.
 
 ## Features
 - **Predictive Modeling**: Utilizing machine learning algorithms like Random Forest and Logistic Regression to predict player churn.
