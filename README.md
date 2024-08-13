@@ -64,17 +64,15 @@ This project focuses on predicting player churn in online games using machine le
 
 ## Visualizations
 - **Power BI Dashboard**: The dashboard visualizes player churn metrics, allowing for easy interpretation of the data.
-![Power BI Dashboard](path/to/your/dashboard_screenshot.png) *(Replace with actual path or upload the image)*
+![Power BI Dashboard]([path/to/your/dashboard_screenshot.png](https://github.com/pancham8675/player_churn_prediction/blob/main/powerbi_dashboard/not_to_churn.jpg)[])
 
 ## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your proposed changes. Make sure to follow the coding standards and include tests for any new functionality.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
+- Thanks to the team in building the project - Kalpana Kale, Ruchita Patre
 - Special thanks to the contributors of the datasets and tools used in this project.
 - Appreciation to the academic and professional communities that provided valuable feedback on the research paper.
 
 ## Contact Information
-For any questions, feedback, or collaboration opportunities, feel free to reach out to me at [Your Email Address].
+For any questions, feedback, or collaboration opportunities, feel free to reach out to me at [pancham8675@gmail.com].
