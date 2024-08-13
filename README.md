@@ -14,9 +14,8 @@ This project focuses on predicting player churn in online games using machine le
 8. [Results](#results)
 9. [Visualizations](#visualizations)
 10. [Contributing](#contributing)
-11. [License](#license)
-12. [Acknowledgments](#acknowledgments)
-13. [Contact Information](#contact-information)
+11. [Acknowledgments](#acknowledgments)
+12. [Contact Information](#contact-information)
 
 ## Installation
 1. Clone the repository to your local machine.
@@ -64,7 +63,10 @@ This project focuses on predicting player churn in online games using machine le
 
 ## Visualizations
 - **Power BI Dashboard**: The dashboard visualizes player churn metrics, allowing for easy interpretation of the data.
-![Power BI Dashboard]([path/to/your/dashboard_screenshot.png](https://github.com/pancham8675/player_churn_prediction/blob/main/powerbi_dashboard/not_to_churn.jpg)[])
+
+  ![PowerBI Dashboard (Person not to churn out)](https://github.com/pancham8675/player_churn_prediction/blob/main/powerbi_dashboard/not_to_churn.jpg)
+
+  ![PowerBI Dashboard (Person to churn out)](https://github.com/pancham8675/player_churn_prediction/blob/main/powerbi_dashboard/to_churn.jpg)
 
 ## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your proposed changes. Make sure to follow the coding standards and include tests for any new functionality.
@@ -75,4 +77,4 @@ Contributions are welcome! Please fork the repository and create a pull request 
 - Appreciation to the academic and professional communities that provided valuable feedback on the research paper.
 
 ## Contact Information
-For any questions, feedback, or collaboration opportunities, feel free to reach out to me at [pancham8675@gmail.com].
+For any questions, feedback, or collaboration opportunities, feel free to reach out to me at[pancham8675@gmail.com.
